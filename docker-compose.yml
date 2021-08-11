@@ -10,9 +10,10 @@ services:
     container_name: cbox_nginx
     ports:
       - "8080:80"
-      
-      # volume
-      
+    volumes:
+      - type: bind
+        source: ./src
+        target: /web
 
   # php
   php:
@@ -22,9 +23,12 @@ services:
     container_name: cbox_php
     ports:
       - "9000:9000"
+    volumes:
+      - type: bind
+        source: ./src
+        target: /web
 
-      # volume
+  # todo: composer
 
-  # composer
-
-  # npm
+  # todo: npm
+  
