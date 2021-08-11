@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+
+  # nginx
+  nginx:
+    build:
+      context: ./
+      dockerfile: docker/nginx/Dockerfile
+    container_name: cbox_nginx
+    ports:
+      - "8080:80"
+      
+      # volume
+      
+
+  # php
+  php:
+    build:
+      context: ./
+      dockerfile: docker/php/Dockerfile
+    container_name: cbox_php
+    ports:
+      - "9000:9000"
+
+      # volume
+
+  # composer
+
+  # npm
