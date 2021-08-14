@@ -19,7 +19,7 @@ var upCmd = &cobra.Command{
 		call.Stderr = os.Stderr
 		err := call.Run()
 		if err != nil {
-			log.Fatalf("cmd.Run() failed with %s\n", err)
+			log.Fatalf("up command failed with %s\n", err)
 		}
 	},
 }
