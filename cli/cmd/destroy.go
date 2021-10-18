@@ -18,7 +18,7 @@ var destroyCmd = &cobra.Command{
 		// TODO: add a prompt for confirmation
 		// TODO: later also remove data volumes of databases for example
 		//call := exec.Command("docker-compose", "down")
-		call := exec.Command("docker-compose", "down")
+		call := exec.Command("docker-compose", "-f", "../.config/docker-compose.yaml", "down")
 		call.Stdout = os.Stdout
 		call.Stderr = os.Stderr
 		err := call.Run()
@@ -27,7 +27,7 @@ var destroyCmd = &cobra.Command{
 		}
 
 		// TODO: docker rmi is not working
-		call = exec.Command("docker rmi", "cbox_nginx", "cbox_php")
+		call = exec.Command("docker rmi", "dbox_nginx", "dbox_php")
 		call.Stdout = os.Stdout
 		call.Stderr = os.Stderr
 		err = call.Run()

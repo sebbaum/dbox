@@ -12,12 +12,12 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "cboxctl",
-	Short: "Control your cbox local development environment",
-	Long: `With cboxctl you have full control over your local development environment
+	Use:   "dboxctl",
+	Short: "Control your dbox local development environment",
+	Long: `With dboxctl you have full control over your local development environment
 for web applications.
 
-Cbox is based on docker and docker-compose.`,
+Dbox is based on docker and docker-compose.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },

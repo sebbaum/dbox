@@ -5,30 +5,31 @@ services:
   # nginx
   nginx:
     build:
-      context: ./
-      dockerfile: docker/nginx/Dockerfile
-    container_name: cbox_nginx
+      context: ../
+      dockerfile: ./docker/nginx/Dockerfile
+    container_name: dbox_nginx
     ports:
       - "8080:80"
     volumes:
       - type: bind
-        source: ./src
+        source: ../src
         target: /web
 
   # php
   php:
     build:
-      context: ./
-      dockerfile: docker/php/Dockerfile
-    container_name: cbox_php
+      context: ../
+      dockerfile: ./docker/php/Dockerfile
+    container_name: dbox_php
     ports:
       - "9000:9000"
     volumes:
       - type: bind
-        source: ./src
+        source: ../src
         target: /web
 
   # todo: composer
-
   # todo: npm
-  
+  # todo: mysql
+  # todo: redis
+  # todo: mailhog

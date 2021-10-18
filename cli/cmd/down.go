@@ -14,7 +14,7 @@ var downCmd = &cobra.Command{
 	Short: "Shut down the environment",
 	Long:  `Runs the docker-compose down command for you in order to shut down the local development environment.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		call := exec.Command("docker-compose", "down")
+		call := exec.Command("docker-compose", "-f", "../.config/docker-compose.yaml", "down")
 		call.Stdout = os.Stdout
 		call.Stderr = os.Stderr
 		err := call.Run()

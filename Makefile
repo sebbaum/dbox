@@ -1,5 +1,5 @@
-NGINX_IMAGE = cbox_nginx
-PHP_IMAGE = cbox_php
+NGINX_IMAGE = dbox_nginx
+PHP_IMAGE = dbox_php
 TAG = latest
 
 .PHONY: rm
